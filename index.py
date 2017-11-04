@@ -150,11 +150,11 @@ class index:
             f=0
             for key in od.keys():
                 diff.append(key)
-            if len(diff) ==1:
-            	gammaDiffnew.append(getGamma(diff[0]))
-            	diff2.append(getGamma(diff[0]))
-            else:
-            	for i in range(len(diff)-1, 0, -1):
+            gammaDiffnew.append(getGamma(diff[0]))
+            diff2.append(getGamma(diff[0]))
+            
+            if len(diff) >1:
+            	for i in range(1, len(diff)):
                 	diff2.append(getGamma(diff[i] - diff[i-1]))
                 	print "appended i= "+str(i)+" and len= "+ str(len(diff2))
                 	diff[i] = abs(diff[i] - diff[i-1])
