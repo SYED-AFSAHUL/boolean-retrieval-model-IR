@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1 style="color: white; text-align: center; font-size: 36; font-family: caviar dreams; margin-top: 50px">SEARCH MASTER</h1>
+	<div style="background-color: skyblue; width: 500px; align-content: center; margin-left: 430px; margin-top: 150px; height: 200px">
+	<h1 style="font-family: caviar dreams; text-align: center; color: grey; padding: 20px">Enter query:</h1>
+	<title>Information Retrieval</title>
+	<script type="text/javascript">
+		import System.IO;
+		import System;
+		var filePath = "query.txt";
+		function getQuery(){
+			var q=document.getElementById("query");
+			document.write(q);
+			var sw : StreamWriter = new StreamWriter("query.txt");
+    		sw.WriteLine(q);
+    		sw.Flush();
+    		sw.Close();
+		}
+	</script>
+</head>
+<body bgcolor="black">
+	<form method="get">
+		<input style="margin-left: 160px; " type="text" name="query" id="query"><br>
+		<br>
+		q
+		<input style="margin-left: 220px; margin-top: 20px" type="submit" onclick="getQuery()" name="submit">
+	</form>
+    </div>
+</body>
+</html>
